@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Bootstrap Link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- CSS Link -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome script -->
+  <script src="https://kit.fontawesome.com/92ae6f1716.js" crossorigin="anonymous"></script>
+  <title>CODE CAMP EX. 8.02.20</title>
+</head>
+
+<body>
+
+  <div class="input-group mb-3 container mt-4">
+    <input id="input" type="text" class="form-control col-5 bg-light" placeholder="Search..."
+      aria-label="Recipient's username" aria-describedby="basic-addon2">
+    <div class="input-group-append">
+      <button onclick="searchMovie()" class="btn btn-success" type="button"><i class="fas fa-search"></i></button>
+    </div>
+
+    <div class="input-group-append ml-3">
+      <button type="button" class="btn btn-danger" data-toggle="modal"
+        data-target="#wishList"><i class="far fa-heart text-white"></i></button>
+    </div>
+  </div>
+
+  <div id="movieList"></div>
+
+
+  <!-- Modal Details-->
+  <div class="modal fade" id="filmInfo" tabindex="-1" role="dialog" aria-labelledby="filmInfoLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="filmInfoLabel">Loading...</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img id="filmPoster" class="img-fluid mx-auto d-block" alt="Image is Loading...">
+          <h5>Release Time</h5>
+          <p id="releaseTime"></p>
+          <h5>Run Time</h5>
+          <p id="runTime"></p>
+          <h5>Category</h5>
+          <p id="category"></p>
+          <h5>Director</h5>
+          <p id="director"></p>
+          <h5>Writer</h5>
+          <p id="writer"></p>
+          <h5>Actors</h5>
+          <p id="actors"></p>
+          <h5>Plot</h5>
+          <p id="plot"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WISH LIST MODAL -->
+
+  <div class="modal fade bd-example-modal-lg" id="wishList" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-primary" id="exampleModalScrollableTitle">MY LIST</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div id="wishModal" class="modal-body d-flex flex-row flex-nowrap">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <script async src="main.js"></script>
+</body>
+
+</html>
