@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 25px;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   background-image: url("bgwood.jpg");
@@ -17,6 +17,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   box-sizing: border-box;
+  justify-content: center;
 }
 
 #imageID {
