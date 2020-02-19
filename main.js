@@ -47,7 +47,6 @@ function showDetails(elem) {
   fetch(url)
     .then(response => response.json())
     .then(data => {
-      console.log(data);
 
       $('#filmInfoLabel').html(data.Title);
       $('#filmPoster').attr("src", data.Poster);
@@ -81,8 +80,6 @@ function addMovieToList(event) {
   fetch(url)
     .then(response => response.json())
     .then((data) => {
-      console.log(data.imdbID);
-
 
       $('#wishModal').append(
         `<div id="${data.imdbID}" class="mt-1">
